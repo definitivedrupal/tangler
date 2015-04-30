@@ -185,9 +185,9 @@ class Mapper
         foreach ($map as $type => $pathMap) {
             foreach ($pathMap as $installPath => $targetPath) {
                 if ($fs->exists("$root/$installPath")) {
-                  if ($type === 'core') {
+                  // if ($type === 'core') {
                     $fs->mirror("$root/$installPath", "$targetPath");
-                  }
+                  /* }
                     else {
                         $fs->symlink(
                             rtrim(substr($fs->makePathRelative(
@@ -197,7 +197,7 @@ class Mapper
                             $targetPath,
                             true
                         );
-                    } 
+                    } */ 
                 }
             }
         }
