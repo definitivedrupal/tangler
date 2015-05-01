@@ -67,16 +67,16 @@ class Mapper
                 $name = explode('/', $package->getPrettyName())[1];
                 $mapRef =& $typeInstallMap[$drupalType][rtrim($installPath, '/')] ;
 
-                /* if (in_array($drupalType, ['module', 'theme'])) {
+                 if (in_array($drupalType, ['module', 'theme'])) {
                     $mapRef = sprintf(
                         $typePathMap[$drupalType] . '/%s',
                         'contrib',
                         $name
                     );
                 }
-                else { */
+                else { 
                     $mapRef = $typePathMap[$drupalType];
-                // }
+                 }
             }
         }
         return array_intersect_key($typeInstallMap, $typePathMap);
