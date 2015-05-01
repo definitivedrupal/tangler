@@ -186,6 +186,9 @@ class Mapper
             foreach ($pathMap as $installPath => $targetPath) {
                 if ($fs->exists("$root/$installPath")) {
                   // if ($type === 'core') {
+                  /* More hackery for this to work with Pantheon. 
+                   * We need to keep Composer from clobbering Pantheon's .git directory. */
+                  if (preg_match('/(\.git|\.gitignore)$/', $targetPath, $matches)) next; 
                     $fs->mirror("$root/$installPath", "$targetPath");
                   /* }
                     else {
