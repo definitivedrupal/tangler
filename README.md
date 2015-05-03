@@ -19,6 +19,8 @@ The algorithm is something like this:
 
 This version is updated to optionally allow all drupal modules & themes (steps 2-5) to be copied, instead of linked, so that the resultant installation can be used with Pantheon. 
 
+We also ignore .git as a filepath so as to not clobber the git history in our Pantheon subtree (with Drupal core's .git history.) This version also ignores .gitignore though that seems like a mistake. 
+
 Also, should probably indicate a minimum version of PHP since this will not likely work unless you have >=5.4.0
 
 # Installation
