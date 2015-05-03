@@ -15,6 +15,14 @@
     "license": "open",
     "authors": [
         {
+            "name": "Will Milton",
+            "email": "will@prometsource.com",
+        }
+        {
+            "name": "Allan Chappell",
+            "email": "allan@prometsource.com",
+        }
+        {
             "name": "Forest Mars",
             "email": "forestmars+github@gmail.com"
         }
